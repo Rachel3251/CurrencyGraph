@@ -1,0 +1,110 @@
+﻿body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #000000;
+    font-weight: 800;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+label {
+    font-size: 1em;
+    color: #003366;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+select {
+    font-size: 1.1em;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #d1d1d1;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+    select:hover {
+        border-color: #003366;
+        box-shadow: 0 2px 8px rgba(0, 51, 102, 0.3);
+    }
+
+#loadButton {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 240px;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+    #loadButton:hover {
+        background-color: #001f3d;
+        transform: scale(1.05);
+    }
+
+#currencyChart {
+    width: 80%;
+    height: 350px;
+    max-width: 800px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    position: relative;
+}
+
+.spinner-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+    display: none; 
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

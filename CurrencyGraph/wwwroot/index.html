@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Graph</title>
+    <link rel="stylesheet" href="index.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@1.0.0"></script>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>Currency Exchange Rate Graph</h1>
+
+        <label for="period">Select Period:</label>
+        <select id="period">
+            <option value="" selected disabled>choose period</option>
+            <option value="week">Last Week</option>
+            <option value="month">Last Month</option>
+            <option value="halfyear">Last 6 Months</option>
+            <option value="year">Last Year</option>
+        </select>
+        <button id="loadButton">Load Graph</button>
+        <div class="spinner-container" id="loadingIndicator">
+            <div class="spinner"></div>
+        </div>
+        <canvas id="currencyChart"></canvas>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('loadButton').addEventListener('click', loadChartData);
+        });
+
+        let chartInstance = null;
+
+        async function loadChartData() {
+            const period = document.getElementById("period").value;
+            const loadingIndicator = document.getElementById("loadingIndicator");
+
+            loadingIndicator.style.display = "flex"; 
+
+            if (chartInstance) {
+                chartInstance.destroy();
+                chartInstance = null;
+            }
+
+            try {
+                const fetchResponse = await fetch('/api/Currency/fetch', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+                if (!fetchResponse.ok) {
+                    throw new Error(`HTTP error! Status: ${fetchResponse.status}`);
+                }
+
+                const response = await fetch(`/api/Currency/currency-graph?period=${period}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                if (!Array.isArray(data)) {
+                    throw new Error("The data is not in the expected format.");
+                }
+
+                let labels = [];
+                let datasets = [];
+
+                data.forEach(currency => {
+                    if (!currency.values || !Array.isArray(currency.values)) {
+                        console.warn("Invalid currency data:", currency);
+                        return;
+                    }
+
+                    const dataset = {
+                        label: `${currency.currency} (${currency.currencyCode})`,
+                        data: currency.values.map(value => {
+                            const date = new Date(value.lastUpdated);
+                            if (!labels.some(label => label.getTime() === date.getTime())) {
+                                labels.push(date);
+                            }
+                            return { x: date, y: value.exchangeRate };
+                        }),
+                        borderColor: getRandomColor(),
+                        borderWidth: 2,
+                        fill: false
+                    };
+
+                    datasets.push(dataset);
+                });
+
+                if (datasets.length === 0) {
+                    throw new Error("No valid datasets to display.");
+                }
+
+                const formatDate = (date) => {
+                    const day = String(date.getDate()).padStart(2, '0');
+                    const month = String(date.getMonth() + 1).padStart(2, '0');
+                    const year = date.getFullYear();
+                    return `${day}/${month}/${year}`;
+                };
+
+                const formattedLabels = labels.map(date => formatDate(date));
+
+                const canvas = document.getElementById('currencyChart');
+                canvas.width = window.innerWidth * 0.8;
+
+                const ctx = canvas.getContext('2d');
+                chartInstance = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: formattedLabels,
+                        datasets: datasets
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            tooltip: {
+                                enabled: true,
+                                mode: 'nearest',
+                                intersect: false,
+                                callbacks: {
+                                    label: function (tooltipItem) {
+                                        return tooltipItem.dataset.label + ': ' + tooltipItem.raw.y.toFixed(2);
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: {
+                                type: 'category',
+                                title: {
+                                    display: true,
+                                    text: 'Date'
+                                }
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Exchange Rate'
+                                },
+                                ticks: {
+                                    callback: function (value) {
+                                        return value.toFixed(2);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            } catch (error) {
+                console.error("Error loading chart data:", error);
+                alert("Failed to load graph data. Please try again.");
+            } finally {
+                loadingIndicator.style.display = "none";
+            }
+        }
+
+        const usedColors = [];
+
+        function getRandomColor() {
+            let color;
+            do {
+                const r = Math.floor(Math.random() * 255);
+                const g = Math.floor(Math.random() * 255);
+                const b = Math.floor(Math.random() * 255);
+                color = `rgb(${r},${g},${b})`;
+            } while (usedColors.includes(color));
+
+            usedColors.push(color);
+            return color;
+        }
+    </script>
+</body>
+</html>
