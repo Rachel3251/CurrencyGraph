@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "Hash": "L4GCLNsUzrRFvoloa74SJgmtstMi6x568OW+it+TUbw=",
+  "Source": "CurrencyGraph",
+  "BasePath": "_content/CurrencyGraph",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CurrencyGraph\\wwwroot",
+      "Source": "CurrencyGraph",
+      "ContentRoot": "C:\\Users\\user1\\Downloads\\CurrencyGraph - Rachel Tenenboim\\‏‏CurrencyGraph - Rachel Tenenboim\\CurrencyGraph\\wwwroot\\",
+      "BasePath": "_content/CurrencyGraph",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\user1\\Downloads\\CurrencyGraph - Rachel Tenenboim\\‏‏CurrencyGraph - Rachel Tenenboim\\CurrencyGraph\\wwwroot\\index.css",
+      "SourceId": "CurrencyGraph",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user1\\Downloads\\CurrencyGraph - Rachel Tenenboim\\‏‏CurrencyGraph - Rachel Tenenboim\\CurrencyGraph\\wwwroot\\",
+      "BasePath": "_content/CurrencyGraph",
+      "RelativePath": "index#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "z96vo21zgv",
+      "Integrity": "h2EgW5ZvZKdz6lN2CC6AJ/SYIe5Oa/eEdEuup1Rdh78=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.css"
+    },
+    {
+      "Identity": "C:\\Users\\user1\\Downloads\\CurrencyGraph - Rachel Tenenboim\\‏‏CurrencyGraph - Rachel Tenenboim\\CurrencyGraph\\wwwroot\\index.html",
+      "SourceId": "CurrencyGraph",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user1\\Downloads\\CurrencyGraph - Rachel Tenenboim\\‏‏CurrencyGraph - Rachel Tenenboim\\CurrencyGraph\\wwwroot\\",
+      "BasePath": "_content/CurrencyGraph",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8e8pnm3sq4",
+      "Integrity": "QEowBfcmVD/efFhU8wtIvJre+y22/bOXpI1GayRW8AM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "index.8e8pnm3sq4.html",
+      "AssetFile": "C:\\Users\\user1\\Downloads\\CurrencyGraph - Rachel Tenenboim\\‏‏CurrencyGraph - Rachel Tenenboim\\CurrencyGraph\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6996"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QEowBfcmVD/efFhU8wtIvJre+y22/bOXpI1GayRW8AM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 23:14:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8e8pnm3sq4"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QEowBfcmVD/efFhU8wtIvJre+y22/bOXpI1GayRW8AM="
+        }
+      ]
+    },
+    {
+      "Route": "index.css",
+      "AssetFile": "C:\\Users\\user1\\Downloads\\CurrencyGraph - Rachel Tenenboim\\‏‏CurrencyGraph - Rachel Tenenboim\\CurrencyGraph\\wwwroot\\index.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2334"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"h2EgW5ZvZKdz6lN2CC6AJ/SYIe5Oa/eEdEuup1Rdh78=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 23:10:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-h2EgW5ZvZKdz6lN2CC6AJ/SYIe5Oa/eEdEuup1Rdh78="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Users\\user1\\Downloads\\CurrencyGraph - Rachel Tenenboim\\‏‏CurrencyGraph - Rachel Tenenboim\\CurrencyGraph\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6996"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QEowBfcmVD/efFhU8wtIvJre+y22/bOXpI1GayRW8AM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 23:14:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QEowBfcmVD/efFhU8wtIvJre+y22/bOXpI1GayRW8AM="
+        }
+      ]
+    },
+    {
+      "Route": "index.z96vo21zgv.css",
+      "AssetFile": "C:\\Users\\user1\\Downloads\\CurrencyGraph - Rachel Tenenboim\\‏‏CurrencyGraph - Rachel Tenenboim\\CurrencyGraph\\wwwroot\\index.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2334"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"h2EgW5ZvZKdz6lN2CC6AJ/SYIe5Oa/eEdEuup1Rdh78=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 23:10:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "z96vo21zgv"
+        },
+        {
+          "Name": "label",
+          "Value": "index.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-h2EgW5ZvZKdz6lN2CC6AJ/SYIe5Oa/eEdEuup1Rdh78="
+        }
+      ]
+    }
+  ]
+}

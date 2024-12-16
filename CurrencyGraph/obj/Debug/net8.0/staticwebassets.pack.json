@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\user1\\Downloads\\CurrencyGraph - Rachel Tenenboim\\‏‏CurrencyGraph - Rachel Tenenboim\\CurrencyGraph\\wwwroot\\index.css",
+      "PackagePath": "staticwebassets\\index.css"
+    },
+    {
+      "Id": "C:\\Users\\user1\\Downloads\\CurrencyGraph - Rachel Tenenboim\\‏‏CurrencyGraph - Rachel Tenenboim\\CurrencyGraph\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CurrencyGraph.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CurrencyGraph.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CurrencyGraph.props",
+      "PackagePath": "build\\CurrencyGraph.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CurrencyGraph.props",
+      "PackagePath": "buildMultiTargeting\\CurrencyGraph.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CurrencyGraph.props",
+      "PackagePath": "buildTransitive\\CurrencyGraph.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
